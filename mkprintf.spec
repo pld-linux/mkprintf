@@ -24,11 +24,12 @@ programistów.
 %setup -q
 
 %build
-%{__make} CFLAGS="%{rpmcflags} -DVERSION=%{version}" \
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -DVERSION=%{version}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8}
 
 install mkprintf $RPM_BUILD_ROOT%{_bindir}/mkprintf
@@ -39,6 +40,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/*/*
-%doc COPYING README
+%{_mandir}/man8/*
