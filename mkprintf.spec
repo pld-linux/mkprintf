@@ -4,28 +4,29 @@ Name:		mkprintf
 Version:	1.0
 Release:	1
 Group:		Development/Tools
-Group(pl):	Programowanie/Narzêdzia
 Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
-Copyright:	GPL
-Source:		ftp://sunsite.unc.edu/pub/Linux/devel/compiler-tools/%{name}-%{version}.tgz
+Group(pl):	Programowanie/Narzêdzia
+License:	GPL
+Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/compiler-tools/%{name}-%{version}.tgz
 BuildRequires:	flex
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Mkprintf reads the named input file (or standard input if no file is named) and writes a C function that outputs the text of this file.
+Mkprintf reads the named input file (or standard input if no file is
+named) and writes a C function that outputs the text of this file.
 This is what lazy C programmers have been waiting for.
 
 %description -l pl
-Mkprintf wczytuje podany plik (lub standardowe wej¶cie) i wypisuje funkcjê w C, która wypisze podany tekst.
-Typowe narzêdzie dla leniwych programistów.
+Mkprintf wczytuje podany plik (lub standardowe wej¶cie) i wypisuje
+funkcjê w C, która wypisze podany tekst. Typowe narzêdzie dla leniwych
+programistów.
 
 %prep
 %setup -q
 
 %build
 %{__make} CFLAGS="$RPM_OPT_FLAGS -DVERSION=%{version}" \
-	LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT
