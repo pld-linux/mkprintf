@@ -28,10 +28,10 @@ programistów.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__install} -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8}
 
-%{__install} mkprintf $RPM_BUILD_ROOT%{_bindir}/mkprintf
-%{__install} mkprintf.8 $RPM_BUILD_ROOT%{_mandir}/man8/mkprintf.8
+install mkprintf $RPM_BUILD_ROOT%{_bindir}/mkprintf
+install mkprintf.8 $RPM_BUILD_ROOT%{_mandir}/man8/mkprintf.8
 
 gzip -9nf COPYING README
 
