@@ -6,6 +6,7 @@ Release:	1
 Group:		Development/Tools
 License:	GPL
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/compiler-tools/%{name}-%{version}.tgz
+# Source0-md5:	2f8e251ede493aa06ab16501c3241cd6
 BuildRequires:	flex
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
