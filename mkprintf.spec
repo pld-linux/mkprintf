@@ -4,9 +4,6 @@ Name:		mkprintf
 Version:	1.0
 Release:	1
 Group:		Development/Tools
-Group(de):	Entwicklung/Werkzeuge
-Group(fr):	Development/Outils
-Group(pl):	Programowanie/Narzêdzia
 License:	GPL
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/compiler-tools/%{name}-%{version}.tgz
 BuildRequires:	flex
