@@ -26,7 +26,7 @@ programistów.
 %setup -q
 
 %build
-%{__make} CFLAGS="$RPM_OPT_FLAGS -DVERSION=%{version}" \
+%{__make} CFLAGS="%{rpmcflags} -DVERSION=%{version}" \
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -36,8 +36,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__install} mkprintf $RPM_BUILD_ROOT%{_bindir}/mkprintf
 %{__install} mkprintf.8 $RPM_BUILD_ROOT%{_mandir}/man8/mkprintf.8
 
-gzip -9nf $RPM_BUILD_ROOT/%{_mandir}/man*/* \
-	COPYING README mkprintf-%{version}.lsm
+gzip -9nf COPYING README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
