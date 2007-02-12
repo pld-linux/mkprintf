@@ -1,5 +1,5 @@
 Summary:	Wraps any text file to a C function that outputs the text
-Summary(pl):	Zamienia plik tekstowy na funkcjê C drukuj±c± ten tekst
+Summary(pl.UTF-8):   Zamienia plik tekstowy na funkcjÄ™ C drukujÄ…cÄ… ten tekst
 Name:		mkprintf
 Version:	1.0
 Release:	1
@@ -15,10 +15,10 @@ Mkprintf reads the named input file (or standard input if no file is
 named) and writes a C function that outputs the text of this file.
 This is what lazy C programmers have been waiting for.
 
-%description -l pl
-Mkprintf wczytuje podany plik (lub standardowe wej¶cie) i wypisuje
-funkcjê w C, która wypisze podany tekst. Typowe narzêdzie dla leniwych
-programistów.
+%description -l pl.UTF-8
+Mkprintf wczytuje podany plik (lub standardowe wejÅ›cie) i wypisuje
+funkcjÄ™ w C, ktÃ³ra wypisze podany tekst. Typowe narzÄ™dzie dla leniwych
+programistÃ³w.
 
 %prep
 %setup -q
