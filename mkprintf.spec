@@ -1,5 +1,5 @@
 Summary:	Wraps any text file to a C function that outputs the text
-Summary(pl.UTF-8):   Zamienia plik tekstowy na funkcję C drukującą ten tekst
+Summary(pl.UTF-8):	Zamienia plik tekstowy na funkcję C drukującą ten tekst
 Name:		mkprintf
 Version:	1.0
 Release:	1
